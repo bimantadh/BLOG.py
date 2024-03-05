@@ -5,10 +5,8 @@ import os
 
 load_dotenv()
 
-engine = create_async_engine(
-    url= os.getenv('DATABASE_URL'),
-    echo = True
-)
+engine = create_async_engine(url=os.getenv("DATABASE_URL"), echo=True)
+
 
 class Base(DeclarativeBase):
     pass
